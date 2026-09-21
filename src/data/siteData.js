@@ -1,0 +1,207 @@
+/**
+ * VVT Site Data — Centralized content store
+ */
+
+export const siteData = {
+  agencyInfo: {
+    name: 'VVT',
+    fullName: 'Vogue Ventures Technologies',
+    tagline: 'Digital Growth Partner & Creative Tech',
+    quote: '"Better Visibility. Better Reach. Better Brand Presence. Better Growth."',
+    phone: '+91 93705 14890',
+    phoneHref: 'tel:+919370514890',
+    location: 'Tamil Nadu, India',
+  },
+
+  navLinks: [
+    { name: 'Home', href: '#/' },
+    { name: 'Capabilities', href: '#capabilities' },
+    { name: 'Partner Brands', href: '#brands' },
+    { name: 'Video Work', href: '#videos' },
+    { name: 'Our Approach', href: '#approach' },
+    { name: 'Contact', href: '#contact' },
+  ],
+
+  partnerBrands: [
+    {
+      id: 'benny-brooks',
+      name: 'BENNY BROOKS',
+      tagline: 'Casualwear & Lifestyle Essentials',
+      logo: '/assets/benny-brooks-logo.png',
+      desc: 'Comprehensive marketplace listing management, catalogue optimization, and brand presence across leading platforms.',
+      platforms: [
+        { name: 'Flipkart', url: 'https://www.flipkart.com/search?q=Benny%20Brooks&marketplace=FLIPKART' },
+        { name: 'Amazon', url: 'https://www.amazon.in/s?k=BENNY+BROOKS' },
+        { name: 'Myntra', url: 'https://www.myntra.com/benny-brooks-tshirt?rawQuery=Benny%20Brooks' },
+        { name: 'Snapdeal', url: 'https://www.snapdeal.com/search?keyword=benny%20brooks' },
+      ],
+    },
+    {
+      id: 'tom-milton',
+      name: 'TOM MILTON',
+      tagline: 'Always On Trend — Urban Essentials',
+      logo: '/assets/tom-milton-logo.png',
+      desc: 'End-to-end marketplace management on Myntra, Amazon, and Flipkart, paired with custom direct-to-consumer store strategy.',
+      platforms: [
+        { name: 'Myntra', url: 'https://www.myntra.com/tom-milton?rawQuery=Tom%20milton' },
+        { name: 'Flipkart', url: 'https://www.flipkart.com/search?q=tom%20milton%20t%20shirts' },
+        { name: 'Amazon', url: 'https://www.amazon.in/s?k=TOM+MILTON' },
+        { name: 'Storefront', url: 'https://tommilton.in/' },
+      ],
+    },
+    {
+      id: 'jp-jewellers',
+      name: 'JP GOLD & SILVER',
+      tagline: 'JP Thangamaligai Tirupur & JP Vellimaaligai',
+      logo: '/assets/jp-logo.png',
+      desc: 'Social media visual direction, short-form viral reel production, and brand storytelling for flagship retail showrooms.',
+      platforms: [
+        { name: 'Instagram (Gold)', url: 'https://www.instagram.com/jpthangamaligai.tirupur/?hl=en' },
+        { name: 'Instagram (Silver)', url: 'https://www.instagram.com/jp.vellimaaligai' },
+      ],
+    },
+    {
+      id: 'national-silks',
+      name: 'NATIONAL SILKS & COTTON',
+      tagline: 'Silks, Readymades & Home Textiles',
+      logo: '/assets/national-logo.png',
+      desc: 'Shopify D2C direct storefront setup, catalogue presentation, and high-performance marketplace operations.',
+      platforms: [
+        { name: 'D2C Storefront', url: 'https://nationalcotton.store/' },
+      ],
+    },
+    {
+      id: 'emi',
+      name: 'EMI CLOTHING',
+      tagline: "Women's Contemporary Fashion & Apparel",
+      logo: '/assets/emi-logo.png',
+      desc: 'Marketplace listings across Myntra & Flipkart combined with custom Shopify storefront configuration.',
+      platforms: [
+        { name: 'D2C Store', url: 'https://emiclothing.store/' },
+        { name: 'Myntra', url: 'https://www.myntra.com/emi?rawQuery=Emi' },
+        { name: 'Flipkart', url: 'https://www.flipkart.com/clothing-and-accessories/pr?sid=clo&marketplace=FLIPKART&p%5B%5D=facets.brand%255B%255D%3DEMI' },
+      ],
+    },
+    {
+      id: 'manlino',
+      name: 'MANLINO',
+      tagline: "Men's Everyday Apparel & Fashion",
+      logo: '/assets/manlino-logo.png',
+      desc: 'Full catalogue scaling, marketplace operational management, and sponsored advertising campaigns.',
+      platforms: [
+        { name: 'Flipkart', url: 'http://flipkart.com/search?q=manlino' },
+        { name: 'Myntra', url: 'https://www.myntra.com/manlino?rawQuery=manlino' },
+        { name: 'Snapdeal', url: 'https://www.snapdeal.com/search?keyword=manlino' },
+      ],
+    },
+  ],
+
+  capabilities: [
+    {
+      id: '01',
+      name: 'E-COMMERCE',
+      title: 'Marketplace Management & Optimization',
+      desc: 'Complete marketplace journey across Amazon, Flipkart, Myntra, Snapdeal, and leading platforms. We handle listings, orders, marketplace ads, and customer support.',
+      pills: ['Catalogue & Listings', 'Order Processing', 'Marketplace Ads', 'Brand Stores'],
+    },
+    {
+      id: '02',
+      name: 'SHOPIFY',
+      title: 'Direct-to-Consumer Storefronts',
+      desc: 'Turn your brand into its own store with high-converting, clean Shopify experiences. We handle store design, products, payment gateways, and checkout optimization.',
+      pills: ['Custom Store Design', 'Payment & Cart Config', 'Store Optimization', 'D2C Growth'],
+    },
+    {
+      id: '03',
+      name: 'META ADVERTISING',
+      title: 'Audience Targeting & Growth Campaigns',
+      desc: 'Strategic ad creative, audience targeting, and funnel management for real brand impact across Instagram and Facebook.',
+      pills: ['Campaign Strategy', 'Creative Planning', 'Funnel Optimization', 'Analytics'],
+    },
+    {
+      id: '04',
+      name: 'CONTENT CREATION',
+      title: 'Product Shoots & Short-form Media',
+      desc: 'Scripted reels, photography, AI imaging, and platform-ready social content built for engagement and organic discovery.',
+      pills: ['Product Shoots', 'Reel Production', 'AI Imaging', 'Script & Direction'],
+    },
+    {
+      id: '05',
+      name: 'WEBSITE DEVELOPMENT',
+      title: 'Static & Dynamic Digital Homes',
+      desc: 'Clean, ultra-fast custom web applications and brand sites built around your business goals with modern web standards.',
+      pills: ['Static Websites', 'Dynamic Platforms', 'Custom Web Apps', 'Responsive UX'],
+    },
+    {
+      id: '06',
+      name: 'OUR APPROACH',
+      title: 'Integrated Growth Strategy',
+      desc: 'Unifying marketplace, D2C, ads, and content into one seamless growth partner rather than multiple disconnected agencies.',
+      pills: ['Multi-Channel Strategy', 'Brand Positioning', 'Performance Scaling', 'Unified Operations'],
+    },
+  ],
+
+  reels: [
+    {
+      id: 'reel-1',
+      handle: 'jp.vellimaaligai',
+      url: 'https://www.instagram.com/jp.vellimaaligai',
+      videoUrl: '/videos/reel1.mp4',
+      title: 'Jewelry Storytelling & Silver Craftsmanship',
+      desc: 'Short-form video production, reel strategy, and silver jewelry craftsmanship storytelling.',
+      categoryTag: 'REEL PRODUCTION • SILVER',
+    },
+    {
+      id: 'reel-2',
+      handle: 'jpthangamaligai.tirupur',
+      url: 'https://www.instagram.com/jpthangamaligai.tirupur/?hl=en',
+      videoUrl: '/videos/reel2.mp4',
+      title: 'High-Engagement Bridal & Gold Showcase',
+      desc: 'Bridal jewelry showcase reels, gold collection highlights, and high-engagement social video.',
+      categoryTag: 'BRAND REELS • GOLD',
+    },
+    {
+      id: 'reel-3',
+      handle: 'jpthangamaligai.tirupur',
+      url: 'https://www.instagram.com/jpthangamaligai.tirupur/?hl=en',
+      videoUrl: '/videos/reel3.mp4',
+      title: 'Heritage Craftsmanship & Festival Reels',
+      desc: 'Festival collections and heritage craftsmanship reels capturing traditional elegance.',
+      categoryTag: 'FESTIVAL CAMPAIGN',
+    },
+  ],
+
+  highlights: [
+    { title: 'Dedicated Attention', desc: 'We work with a select group of brands to give complete focus and hands-on execution.' },
+    { title: 'Everything Under One Roof', desc: 'Marketplaces, Shopify, advertising, video content and websites through one team.' },
+    { title: 'Agile & Transparent', desc: 'No complex corporate agency layers. Direct communication with your growth partners.' },
+    { title: 'Built Around Your Brand', desc: 'We take time to understand your products, margins, and customer preferences.' },
+  ],
+
+  approachSteps: [
+    {
+      num: '01',
+      title: 'Understand First',
+      desc: 'We study your product margins, inventory cycles, and buyer preferences before launching campaigns.',
+    },
+    {
+      num: '02',
+      title: 'Everything In-House',
+      desc: 'E-commerce, Shopify, advertising, video content and websites unified under one roof.',
+    },
+    {
+      num: '03',
+      title: 'Real Execution',
+      desc: 'Hands-on daily listing maintenance, ad tuning, and ticket follow-ups to keep operations running smoothly.',
+    },
+  ],
+
+  serviceOptions: [
+    'Complete Digital Solutions',
+    'Marketplace Management (Amazon/Flipkart)',
+    'Shopify D2C Storefront Setup',
+    'Meta Advertising & Ad Creative',
+    'Video Reels & Content Production',
+    'Website Development',
+  ],
+};

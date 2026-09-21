@@ -1,0 +1,30 @@
+/* =============================================
+   VVT Design Tokens — CSS Custom Properties
+   ============================================= */
+
+:root {
+  /* Background Colors */
+  --bg-page: #fbfbfa;
+  --bg-white: #ffffff;
+  --bg-subtle: #f4f4f2;
+  --bg-dark: #0e0f11;
+  --bg-dark-card: #151619;
+
+  /* Text Colors */
+  --text-dark: #0e0f11;
+  --text-body: #4a4d55;
+  --text-muted: #71737e;
+  --text-white: #ffffff;
+  --text-silver: #a0a2ad;
+
+  /* Border Colors */
+  --border-color: #e2e0d8;
+  --border-light: #ecebe6;
+  --border-dark: rgba(255, 255, 255, 0.12);
+
+  /* Typography */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --container-max: 1240px;
+}
