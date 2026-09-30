@@ -10,9 +10,9 @@ export default function Hero() {
       <div className="hero-grid">
         {/* Left: Copy */}
         <div>
-          <div className="vvt-pill">
+          <div className="vvt-pill hero-badge-pill">
             <span className="vvt-dot vvt-dot-pulse" />
-            DIGITAL GROWTH PARTNER &amp; CREATIVE TECH
+            <span>DIGITAL GROWTH &amp; CREATIVE TECH</span>
           </div>
           <h1>We Build Digital Presence That Moves Brands Forward.</h1>
           <p className="hero-subheadline">
@@ -22,8 +22,23 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta-wrap">
-            <a href="#contact" className="btn-black">WORK WITH VVT →</a>
-            <a href="#capabilities" className="btn-outline">EXPLORE CAPABILITIES ↓</a>
+            <a
+              href="#hero-form"
+              className="btn-black"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('hero-name');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  el.focus();
+                }
+              }}
+            >
+              START A PROJECT →
+            </a>
+            <a href="#capabilities" className="btn-outline">
+              EXPLORE CAPABILITIES ↓
+            </a>
           </div>
 
           <div className="hero-focus-pills">

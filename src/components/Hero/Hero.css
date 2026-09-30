@@ -77,12 +77,16 @@
 @media (max-width: 860px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
-  /* De-congest mobile: hide redundant lead card in Hero (dedicated form is in Contact section) */
   .startup-lead-card {
-    display: none;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -145,5 +149,20 @@
     padding: 0.3rem 0.65rem;
     max-width: 100%;
     box-sizing: border-box;
+  }
+
+  .startup-lead-card {
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
+  }
+
+  .lead-card-heading {
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .lead-card-sub {
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
   }
 }
