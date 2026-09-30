@@ -22,19 +22,8 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta-wrap">
-            <a
-              href="#hero-form"
-              className="btn-black"
-              onClick={(e) => {
-                e.preventDefault();
-                const el = document.getElementById('hero-name');
-                if (el) {
-                  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                  el.focus();
-                }
-              }}
-            >
-              START A PROJECT →
+            <a href="#contact" className="btn-black">
+              WORK WITH VVT →
             </a>
             <a href="#capabilities" className="btn-outline">
               EXPLORE CAPABILITIES ↓
