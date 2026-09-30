@@ -73,7 +73,7 @@ export default function Contact() {
         {/* Right: Form */}
         <div className="contact-form-panel">
           <form onSubmit={handleSubmit}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="form-row-2col">
               <div className="form-group">
                 <label htmlFor="contact-name" className="form-label">Your Name *</label>
                 <input type="text" id="contact-name" name="name" className="form-input" placeholder="e.g. Rahul Sharma" required />
@@ -84,7 +84,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="form-row-2col">
               <div className="form-group">
                 <label htmlFor="contact-email" className="form-label">Email Address *</label>
                 <input type="email" id="contact-email" name="email" className="form-input" placeholder="name@company.com" required />

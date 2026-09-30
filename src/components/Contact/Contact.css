@@ -3,20 +3,20 @@
 .contact-section-grid {
   display: grid;
   grid-template-columns: 1fr 1.25fr;
-  gap: 3rem;
+  gap: clamp(1.75rem, 3.5vw, 3rem);
   align-items: flex-start;
-  margin-top: 2rem;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .contact-info-panel {
   background-color: var(--bg-dark);
   color: #ffffff;
-  border-radius: 16px;
-  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  padding: clamp(1.35rem, 3.5vw, 2.5rem);
 }
 
 .contact-tagline-quote {
-  font-size: 1.45rem;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
   font-weight: 700;
   line-height: 1.4;
   margin-top: 1.25rem;
@@ -26,15 +26,15 @@
 .contact-direct-items {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  margin-top: 2rem;
+  gap: 1.2rem;
+  margin-top: 1.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 1.5rem;
 }
 
 .contact-direct-label {
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-silver);
@@ -45,17 +45,24 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: #ffffff;
+  transition: color var(--transition-fast);
+}
+
+.contact-direct-val:hover {
+  color: #25d366;
 }
 
 .contact-form-panel {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  padding: clamp(1.35rem, 3.5vw, 2.5rem);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 1024px) {
   .contact-section-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }

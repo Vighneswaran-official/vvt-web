@@ -19,9 +19,14 @@ export default function Footer() {
                 className="brand-logo-img"
                 style={{ background: '#000', borderColor: 'rgba(255,255,255,0.2)' }}
               />
-              <span className="brand-name-full" style={{ color: '#ffffff' }}>
-                VOGUE VENTURES TECHNOLOGIES
-              </span>
+              <div className="brand-text-block">
+                <span className="brand-name-primary" style={{ color: '#ffffff' }}>
+                  VOGUE VENTURES
+                </span>
+                <span className="brand-name-sub" style={{ color: 'var(--text-silver)' }}>
+                  TECHNOLOGIES
+                </span>
+              </div>
             </a>
             <div className="footer-quote">
               {siteData.agencyInfo.quote}

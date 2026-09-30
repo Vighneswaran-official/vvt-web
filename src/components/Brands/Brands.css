@@ -3,37 +3,38 @@
 .brands-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem;
-  margin-top: 2rem;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  margin-top: clamp(1.25rem, 3vw, 2rem);
 }
 
 .brand-card {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 2rem;
+  border-radius: var(--radius-md);
+  padding: clamp(1.2rem, 3vw, 1.85rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.5rem;
-  transition: all 0.2s ease;
+  gap: 1.25rem;
+  transition: all var(--transition-fast);
 }
 
 .brand-card:hover {
   border-color: var(--text-dark);
-  box-shadow: 0 12px 28px -6px rgba(14, 15, 17, 0.08);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .brand-card-header {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .brand-inline-logo {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 10px;
   object-fit: contain;
   background-color: #ffffff;
@@ -43,21 +44,21 @@
 }
 
 .brand-title-block h3 {
-  font-size: 1.3rem;
+  font-size: clamp(1.15rem, 2vw, 1.3rem);
   font-weight: 800;
   color: var(--text-dark);
   line-height: 1.2;
 }
 
 .brand-tagline-text {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
   font-weight: 600;
   margin-top: 0.2rem;
 }
 
 .brand-desc-text {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-body);
   line-height: 1.55;
 }
@@ -67,7 +68,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   border-top: 1px solid var(--border-light);
-  padding-top: 1rem;
+  padding-top: 0.9rem;
 }
 
 .brand-platform-btn {
@@ -79,11 +80,14 @@
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.45rem 0.85rem;
+  min-height: 36px;
   border-radius: 6px;
   background-color: var(--bg-subtle);
   border: 1px solid var(--border-color);
   color: var(--text-dark);
-  transition: all 0.2s;
+  transition: all var(--transition-fast);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .brand-platform-btn:hover {
@@ -92,8 +96,19 @@
   border-color: var(--text-dark);
 }
 
+.brand-platform-btn:active {
+  transform: scale(0.97);
+}
+
 @media (max-width: 768px) {
   .brands-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-inline-logo {
+    width: 42px;
+    height: 42px;
   }
 }

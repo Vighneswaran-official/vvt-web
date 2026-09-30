@@ -53,20 +53,30 @@ export function useVideoSlider(totalSlides, mobileBreakpoint = 820) {
     return { transform: `translateX(-${offset}px)` };
   }, [currentIndex]);
 
+  const touchStartY = useRef(0);
+  const touchCurrentY = useRef(0);
+
   // Touch handlers for swipe
   const handleTouchStart = useCallback((e) => {
     touchStartX.current = e.touches[0].clientX;
+    touchCurrentX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    touchCurrentY.current = e.touches[0].clientY;
   }, []);
 
   const handleTouchMove = useCallback((e) => {
     touchCurrentX.current = e.touches[0].clientX;
+    touchCurrentY.current = e.touches[0].clientY;
   }, []);
 
   const handleTouchEnd = useCallback(() => {
-    const diff = touchStartX.current - touchCurrentX.current;
+    const diffX = touchStartX.current - touchCurrentX.current;
+    const diffY = touchStartY.current - touchCurrentY.current;
     const threshold = 40;
-    if (Math.abs(diff) > threshold) {
-      if (diff > 0) {
+
+    // Only swipe if horizontal movement is greater than vertical movement
+    if (Math.abs(diffX) > threshold && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
         nextSlide();
       } else {
         prevSlide();

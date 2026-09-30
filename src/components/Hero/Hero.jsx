@@ -52,7 +52,7 @@ export default function Hero() {
               <input type="text" id="hero-brand" name="brand" className="form-input" placeholder="e.g. Benny Brooks" required />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+            <div className="form-row-2col">
               <div className="form-group">
                 <label htmlFor="hero-email" className="form-label">Email *</label>
                 <input type="email" id="hero-email" name="email" className="form-input" placeholder="name@brand.com" required />

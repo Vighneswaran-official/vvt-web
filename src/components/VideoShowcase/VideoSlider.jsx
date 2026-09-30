@@ -43,7 +43,8 @@ export default function VideoSlider({ reels }) {
           disabled={!canPrev}
           onClick={prevSlide}
         >
-          ← Prev Video
+          <span className="slider-nav-arrow">←</span>
+          <span className="slider-nav-text">Prev</span>
         </button>
 
         <div className="slider-indicators">
@@ -55,7 +56,7 @@ export default function VideoSlider({ reels }) {
               onClick={() => goToSlide(i)}
             />
           ))}
-          <span className="slider-counter-badge" style={{ marginLeft: '0.5rem' }}>
+          <span className="slider-counter-badge">
             {currentIndex + 1} / {totalSlides}
           </span>
         </div>
@@ -66,8 +67,13 @@ export default function VideoSlider({ reels }) {
           disabled={!canNext}
           onClick={nextSlide}
         >
-          Next Video →
+          <span className="slider-nav-text">Next</span>
+          <span className="slider-nav-arrow">→</span>
         </button>
+      </div>
+
+      <div className="slider-swipe-hint">
+        ↔ Swipe or use arrows to view reels
       </div>
     </div>
   );

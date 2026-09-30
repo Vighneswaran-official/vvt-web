@@ -9,6 +9,7 @@ import Capabilities from './components/Capabilities/Capabilities';
 import Approach from './components/Approach/Approach';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import MobileQuickBar from './components/MobileQuickBar/MobileQuickBar';
 
 export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function App() {
 
   return (
     <div className="subtle-grid-bg">
-      <Header onToggleMobile={toggleMobile} />
+      <Header onToggleMobile={toggleMobile} isMobileOpen={mobileOpen} />
       <MobileDrawer isOpen={mobileOpen} onClose={closeMobile} />
 
       <main id="main-content">
@@ -37,6 +38,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <MobileQuickBar />
     </div>
   );
 }
