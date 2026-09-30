@@ -28,11 +28,18 @@ export default function VideoSlider({ reels }) {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {reels.map((reel, idx) => (
-            <div className="video-slide-item" key={reel.id} data-slide-index={idx}>
-              <ReelCard reel={reel} />
-            </div>
-          ))}
+          {reels.map((reel, idx) => {
+            const isMobile = typeof window !== 'undefined' && window.innerWidth <= 820;
+            const isSlideActive = isMobile
+              ? idx === currentIndex
+              : idx === currentIndex || idx === currentIndex + 1;
+
+            return (
+              <div className="video-slide-item" key={reel.id} data-slide-index={idx}>
+                <ReelCard reel={reel} isActive={isSlideActive} />
+              </div>
+            );
+          })}
         </div>
       </div>
 
