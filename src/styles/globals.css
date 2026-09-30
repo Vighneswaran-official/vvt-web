@@ -62,24 +62,24 @@ img, video {
 }
 
 .section-spacing {
-  padding-top: clamp(3rem, 6vw, 5rem);
-  padding-bottom: clamp(3rem, 6vw, 5rem);
+  padding-top: clamp(2.25rem, 5vw, 4.5rem);
+  padding-bottom: clamp(2.25rem, 5vw, 4.5rem);
 }
 
 /* ---- Typography ---- */
 h1, h2, h3, h4 {
   color: var(--text-dark);
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.22;
 }
 
 h1 {
-  font-size: clamp(2rem, 4.2vw, 3.4rem);
-  letter-spacing: -0.03em;
+  font-size: clamp(1.65rem, 3.8vw, 3.2rem);
+  letter-spacing: -0.025em;
 }
 
 h2 {
-  font-size: clamp(1.55rem, 3vw, 2.3rem);
+  font-size: clamp(1.35rem, 2.8vw, 2.2rem);
   letter-spacing: -0.02em;
 }
 

@@ -66,26 +66,80 @@
   margin-bottom: 1.25rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 860px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.25rem;
+    gap: 1.5rem;
+  }
+
+  /* De-congest mobile: hide redundant lead card in Hero (dedicated form is in Contact section) */
+  .startup-lead-card {
+    display: none;
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 640px) {
+  .hero-wrapper {
+    padding-top: 1.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-subheadline {
+    font-size: 0.92rem;
+    margin-top: 1rem;
+    margin-bottom: 1.35rem;
+    line-height: 1.6;
+  }
+
+  /* Sleek side-by-side action buttons instead of 2 massive stacked blocks */
   .hero-cta-wrap {
-    flex-direction: column;
-    gap: 0.65rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    width: 100%;
+    margin-bottom: 1.4rem;
   }
 
   .hero-cta-wrap .btn-black,
   .hero-cta-wrap .btn-outline {
     width: 100%;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.74rem;
+    text-align: center;
+    min-height: 42px;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+
+  /* App-style horizontal chips strip instead of 3 cluttered rows */
+  .hero-focus-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.45rem;
+    padding-bottom: 0.4rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-focus-pills::-webkit-scrollbar {
+    display: none;
   }
 
   .hero-focus-label {
-    width: 100%;
-    margin-bottom: 0.25rem;
+    flex-shrink: 0;
+    margin-right: 0.2rem;
+    font-size: 0.68rem;
+  }
+
+  .hero-focus-pills .vvt-pill {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+    font-size: 0.68rem;
+    padding: 0.32rem 0.65rem;
   }
 }

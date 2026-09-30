@@ -1,85 +1,57 @@
-/* Mobile Quick Sticky Action Bar */
+/* Floating WhatsApp Action Button (Non-intrusive, zero screen blockage) */
 
-.mobile-quick-bar {
+.mobile-floating-fab {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .mobile-quick-bar {
+@media (max-width: 860px) {
+  .mobile-floating-fab {
     display: block;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 100vw;
-    box-sizing: border-box;
-    z-index: 90;
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-top: 1px solid var(--border-color);
-    padding: 0.5rem 0.65rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
-    box-shadow: 0 -4px 18px rgba(14, 15, 17, 0.08);
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    right: 1.15rem;
+    z-index: 89;
   }
 
-  .mobile-quick-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.1fr;
-    gap: 0.4rem;
-    max-width: 500px;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-
-  .quick-btn {
+  .floating-wa-fab {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-    font-size: 0.74rem;
+    gap: 0.5rem;
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 0.65rem 1.1rem;
+    border-radius: 9999px;
+    font-size: 0.82rem;
     font-weight: 700;
+    letter-spacing: 0.02em;
     text-decoration: none;
-    padding: 0.5rem 0.4rem;
-    min-height: 40px;
-    min-width: 0;
-    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.38), 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     transition: all var(--transition-fast);
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
   }
 
-  .quick-btn:active {
-    transform: scale(0.96);
+  .floating-wa-fab:active {
+    transform: scale(0.95);
   }
 
-  .quick-icon {
-    font-size: 0.85rem;
+  .fab-wa-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .quick-wa {
-    background-color: #25d366;
-    color: #ffffff;
-    border: 1px solid #20ba5a;
+  .fab-wa-text {
+    font-size: 0.8rem;
   }
 
-  .quick-call {
-    background-color: var(--bg-subtle);
-    color: var(--text-dark);
-    border: 1px solid var(--border-color);
-  }
-
-  .quick-inquire {
-    background-color: var(--text-dark);
-    color: #ffffff;
-    border: 1px solid var(--text-dark);
-  }
-
-  /* Add bottom padding to body/footer so sticky bar doesn't obscure footer content on mobile */
-  body {
-    padding-bottom: calc(65px + env(safe-area-inset-bottom, 0px));
+  @media (max-width: 400px) {
+    .floating-wa-fab {
+      padding: 0.6rem 0.95rem;
+    }
+    .fab-wa-text {
+      font-size: 0.76rem;
+    }
   }
 }
