@@ -8,8 +8,12 @@ export const siteData = {
     fullName: 'Vogue Ventures Technologies',
     tagline: 'Digital Growth Partner & Creative Tech',
     quote: '"Better Visibility. Better Reach. Better Brand Presence. Better Growth."',
-    phone: '+91 93705 14890',
-    phoneHref: 'tel:+919370514890',
+    phone: '+91 89250 73448',
+    phoneHref: 'tel:+918925073448',
+    whatsapp: '8925073448',
+    whatsappHref: 'https://wa.me/918925073448',
+    email: 'vogueventurestechnologies@gmail.com',
+    emailHref: 'mailto:vogueventurestechnologies@gmail.com',
     location: 'Tamil Nadu, India',
   },
 
@@ -121,9 +125,9 @@ export const siteData = {
     {
       id: '04',
       name: 'CONTENT CREATION',
-      title: 'Product Shoots & Short-form Media',
-      desc: 'Scripted reels, photography, AI imaging, and platform-ready social content built for engagement and organic discovery.',
-      pills: ['Product Shoots', 'Reel Production', 'AI Imaging', 'Script & Direction'],
+      title: 'Product Shoots, AI Video & Short-form Media',
+      desc: 'Scripted reels, photography, AI video generation & imaging, and platform-ready social content built for engagement and organic discovery.',
+      pills: ['Product Shoots', 'Reel Production', 'AI Video Generation', 'AI Imaging', 'Script & Direction'],
     },
     {
       id: '05',
@@ -198,10 +202,11 @@ export const siteData = {
 
   serviceOptions: [
     'Complete Digital Solutions',
+    'AI Video Generation & Content Creation',
     'Marketplace Management (Amazon/Flipkart)',
     'Shopify D2C Storefront Setup',
     'Meta Advertising & Ad Creative',
-    'Video Reels & Content Production',
+    'Video Reels & Product Shoots',
     'Website Development',
   ],
 };

@@ -36,13 +36,25 @@ export default function Contact() {
 
           <div className="contact-direct-items">
             <div>
-              <div className="contact-direct-label">Direct Phone</div>
+              <div className="contact-direct-label">Phone &amp; WhatsApp</div>
               <a
-                href={siteData.agencyInfo.phoneHref}
+                href={siteData.agencyInfo.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="contact-direct-val"
                 style={{ textDecoration: 'none', display: 'inline-block' }}
               >
                 {siteData.agencyInfo.phone}
+              </a>
+            </div>
+            <div>
+              <div className="contact-direct-label">Direct Email</div>
+              <a
+                href={siteData.agencyInfo.emailHref}
+                className="contact-direct-val"
+                style={{ textDecoration: 'none', display: 'inline-block' }}
+              >
+                {siteData.agencyInfo.email}
               </a>
             </div>
             <div>
@@ -52,7 +64,7 @@ export default function Contact() {
             <div>
               <div className="contact-direct-label">Focus Areas</div>
               <div className="contact-direct-val">
-                Amazon, Flipkart, Shopify, Meta Ads, Video Production
+                Amazon, Flipkart, Shopify, Meta Ads, AI Video &amp; Reels
               </div>
             </div>
           </div>
@@ -110,10 +122,37 @@ export default function Contact() {
             {feedback && (
               <div className="form-status-alert success">
                 <strong>Enquiry Sent Successfully!</strong><br />
-                Thank you, {feedback.name} ({feedback.brand}). We have received
-                your requirements for <em>{feedback.service}</em> and will
-                follow up at <strong>{feedback.email}</strong> within 24
-                business hours.
+                Thank you, {feedback.name} ({feedback.brand}). Your inquiry regarding{' '}
+                <em>{feedback.service}</em> has been initiated to Vogue Ventures Technologies via WhatsApp and Email.
+                <div style={{ display: 'flex', gap: '0.6rem', marginTop: '0.85rem', flexWrap: 'wrap' }}>
+                  <a
+                    href={feedback.waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-black"
+                    style={{
+                      fontSize: '0.78rem',
+                      padding: '0.5rem 0.9rem',
+                      backgroundColor: '#25D366',
+                      borderColor: '#25D366',
+                      color: '#ffffff',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    💬 Chat on WhatsApp (+91 89250 73448)
+                  </a>
+                  <a
+                    href={feedback.mailUrl}
+                    className="btn-outline"
+                    style={{
+                      fontSize: '0.78rem',
+                      padding: '0.5rem 0.9rem',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    ✉️ Open Email Draft
+                  </a>
+                </div>
               </div>
             )}
           </form>

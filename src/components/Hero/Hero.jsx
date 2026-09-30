@@ -31,6 +31,7 @@ export default function Hero() {
             <a href="#capabilities" className="vvt-pill" style={{ marginBottom: 0, textDecoration: 'none' }}>Marketplaces</a>
             <a href="#capabilities" className="vvt-pill" style={{ marginBottom: 0, textDecoration: 'none' }}>Shopify D2C</a>
             <a href="#capabilities" className="vvt-pill" style={{ marginBottom: 0, textDecoration: 'none' }}>Meta Ads</a>
+            <a href="#capabilities" className="vvt-pill" style={{ marginBottom: 0, textDecoration: 'none' }}>AI Video Generation</a>
             <a href="#videos" className="vvt-pill" style={{ marginBottom: 0, textDecoration: 'none' }}>Video Reels</a>
           </div>
         </div>
@@ -79,8 +80,36 @@ export default function Hero() {
               <div className="form-status-alert success">
                 <strong>Thank you, {feedback.name}!</strong><br />
                 Your inquiry for <strong>{feedback.brand}</strong> regarding{' '}
-                <em>{feedback.service}</em> has been received. Our team will
-                contact you at <strong>{feedback.email}</strong> shortly.
+                <em>{feedback.service}</em> is initiated to Vogue Ventures Technologies via WhatsApp and Email.
+                <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem', flexWrap: 'wrap' }}>
+                  <a
+                    href={feedback.waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-black"
+                    style={{
+                      fontSize: '0.74rem',
+                      padding: '0.45rem 0.75rem',
+                      backgroundColor: '#25D366',
+                      borderColor: '#25D366',
+                      color: '#ffffff',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    💬 WhatsApp (+91 89250 73448)
+                  </a>
+                  <a
+                    href={feedback.mailUrl}
+                    className="btn-outline"
+                    style={{
+                      fontSize: '0.74rem',
+                      padding: '0.45rem 0.75rem',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    ✉️ Mail Draft
+                  </a>
+                </div>
               </div>
             )}
           </form>

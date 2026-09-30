@@ -52,11 +52,22 @@ export default function Footer() {
             <ul className="footer-links-col">
               <li>
                 <a
-                  href={siteData.agencyInfo.phoneHref}
+                  href={siteData.agencyInfo.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="footer-link-text"
                   style={{ color: '#ffffff', fontWeight: 700 }}
                 >
-                  {siteData.agencyInfo.phone}
+                  WhatsApp: {siteData.agencyInfo.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteData.agencyInfo.emailHref}
+                  className="footer-link-text"
+                  style={{ color: '#d1d1d6' }}
+                >
+                  {siteData.agencyInfo.email}
                 </a>
               </li>
               <li>
