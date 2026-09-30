@@ -91,7 +91,7 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
@@ -122,22 +122,24 @@
   padding: 0.55rem 1.15rem;
   font-size: 0.76rem;
   min-height: 38px;
+  white-space: nowrap;
 }
 
 .mobile-toggle-btn {
   display: none;
   background: #ffffff;
   border: 1px solid var(--border-color);
-  padding: 0.5rem;
+  padding: 0.45rem;
   border-radius: 8px;
   cursor: pointer;
   color: var(--text-dark);
-  min-width: 42px;
-  min-height: 42px;
+  width: 40px;
+  height: 40px;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast);
   touch-action: manipulation;
+  flex-shrink: 0;
 }
 
 .mobile-toggle-btn:hover {
@@ -145,10 +147,26 @@
   border-color: var(--text-dark);
 }
 
-/* Tablet & Mobile responsive queries */
+/* Tablet & Mobile responsive queries — prevent ANY horizontal overflow */
 @media (max-width: 860px) {
   .desktop-nav {
-    display: none;
+    display: none !important;
+  }
+
+  /* CRITICAL: Never display the desktop CTA button alongside hamburger on mobile/tablet */
+  .btn-header-cta {
+    display: none !important;
+  }
+
+  .header-wa-text {
+    display: none !important;
+  }
+
+  .header-wa-btn {
+    padding: 0.45rem;
+    min-width: 38px;
+    height: 38px;
+    justify-content: center;
   }
 
   .mobile-toggle-btn {
@@ -156,31 +174,25 @@
   }
 }
 
-@media (max-width: 580px) {
-  .btn-header-cta {
-    display: none;
+@media (max-width: 480px) {
+  .nav-inner {
+    padding: 0.65rem 1rem;
   }
 
-  .header-wa-text {
-    display: none;
-  }
-
-  .header-wa-btn {
-    padding: 0.5rem;
-    min-width: 40px;
-    justify-content: center;
+  .brand-wrap {
+    gap: 0.5rem;
   }
 
   .brand-logo-img {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 
   .brand-name-primary {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
   .brand-name-sub {
-    font-size: 0.58rem;
+    font-size: 0.55rem;
   }
 }
