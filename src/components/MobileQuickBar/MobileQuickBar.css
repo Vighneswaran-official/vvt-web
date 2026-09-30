@@ -16,24 +16,21 @@
   .floating-wa-fab {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     background-color: #25d366;
     color: #ffffff;
-    padding: 0.65rem 1.1rem;
-    border-radius: 9999px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.38), 0 2px 8px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.42), 0 2px 8px rgba(0, 0, 0, 0.16);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
     transition: all var(--transition-fast);
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
   }
 
   .floating-wa-fab:active {
-    transform: scale(0.95);
+    transform: scale(0.92);
   }
 
   .fab-wa-icon {
@@ -43,15 +40,6 @@
   }
 
   .fab-wa-text {
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 400px) {
-    .floating-wa-fab {
-      padding: 0.6rem 0.95rem;
-    }
-    .fab-wa-text {
-      font-size: 0.76rem;
-    }
+    display: none;
   }
 }

@@ -22,8 +22,8 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta-wrap">
-            <a href="#capabilities" className="btn-black">EXPLORE CAPABILITIES ↓</a>
-            <a href="#contact" className="btn-outline">WORK WITH VVT →</a>
+            <a href="#contact" className="btn-black">WORK WITH VVT →</a>
+            <a href="#capabilities" className="btn-outline">EXPLORE CAPABILITIES ↓</a>
           </div>
 
           <div className="hero-focus-pills">

@@ -66,6 +66,14 @@
   margin-bottom: 1.25rem;
 }
 
+.hero-grid,
+.hero-grid > div {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 @media (max-width: 860px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -80,66 +88,62 @@
 
 @media (max-width: 640px) {
   .hero-wrapper {
-    padding-top: 1.75rem;
+    padding-top: 1.5rem;
     padding-bottom: 2rem;
   }
 
   .hero-subheadline {
     font-size: 0.92rem;
-    margin-top: 1rem;
-    margin-bottom: 1.35rem;
+    margin-top: 0.85rem;
+    margin-bottom: 1.25rem;
     line-height: 1.6;
+    max-width: 100%;
   }
 
-  /* Sleek side-by-side action buttons instead of 2 massive stacked blocks */
+  /* Clean full-width stacked buttons with generous tap size and zero overflow */
   .hero-cta-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
     width: 100%;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-cta-wrap .btn-black,
   .hero-cta-wrap .btn-outline {
     width: 100%;
-    padding: 0.75rem 0.5rem;
-    font-size: 0.74rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+    min-height: 44px;
+    justify-content: center;
     text-align: center;
-    min-height: 42px;
-    white-space: nowrap;
+    box-sizing: border-box;
     border-radius: 8px;
   }
 
-  /* App-style horizontal chips strip instead of 3 cluttered rows */
+  /* Compact wrapping pills that never overflow */
   .hero-focus-pills {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 0.45rem;
-    padding-bottom: 0.4rem;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    flex-wrap: wrap;
+    gap: 0.35rem;
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
     align-items: center;
   }
 
-  .hero-focus-pills::-webkit-scrollbar {
-    display: none;
-  }
-
   .hero-focus-label {
-    flex-shrink: 0;
-    margin-right: 0.2rem;
+    width: 100%;
+    margin-bottom: 0.3rem;
     font-size: 0.68rem;
+    letter-spacing: 0.08em;
   }
 
   .hero-focus-pills .vvt-pill {
-    flex-shrink: 0;
     margin-bottom: 0;
-    white-space: nowrap;
     font-size: 0.68rem;
-    padding: 0.32rem 0.65rem;
+    padding: 0.3rem 0.65rem;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
