@@ -56,32 +56,22 @@ export const siteData = {
     {
       id: 'house-of-tamizhi',
       name: 'HOUSE OF TAMIZHI',
-      tagline: "Women's Ethnic Couture & Contemporary Apparel",
+      tagline: "Curated Women's Ethnic & Contemporary Wear",
       logo: '/assets/tamizhi-logo.png',
-      desc: 'Social commerce growth, luxury reel production, festive campaign shoots, and multi-channel D2C presence.',
+      desc: 'D2C social commerce scaling, viral reel video production, bridal & festive apparel campaigns, and catalogue presentation.',
       platforms: [
         { name: 'Instagram', url: 'https://www.instagram.com/houseoftamizhi?stkn=MXg0cGljNXZ6YmduZQ==' },
       ],
     },
     {
-      id: 'jp-jewellers',
-      name: 'JP GOLD & SILVER',
+      id: 'jpthangamaligai',
+      name: 'JP THANGAMALIGAI',
       tagline: 'JP Thangamaligai Tirupur & JP Vellimaaligai',
       logo: '/assets/jp-logo.png',
       desc: 'Social media visual direction, short-form viral reel production, and brand storytelling for flagship retail showrooms.',
       platforms: [
-        { name: 'Instagram (Gold)', url: 'https://www.instagram.com/jpthangamaligai.tirupur/?hl=en' },
+        { name: 'Instagram (Gold)', url: 'https://www.instagram.com/jpthangamaligai.tirupur/' },
         { name: 'Instagram (Silver)', url: 'https://www.instagram.com/jp.vellimaaligai' },
-      ],
-    },
-    {
-      id: 'national-silks',
-      name: 'NATIONAL SILKS & COTTON',
-      tagline: 'Silks, Readymades & Home Textiles',
-      logo: '/assets/national-logo.png',
-      desc: 'Shopify D2C direct storefront setup, catalogue presentation, and high-performance marketplace operations.',
-      platforms: [
-        { name: 'D2C Storefront', url: 'https://nationalcotton.store/' },
       ],
     },
     {
@@ -157,6 +147,17 @@ export const siteData = {
 
   reels: [
     {
+      id: 'reel-tamizhi-brand',
+      brand: 'House of Tamizhi',
+      handle: 'houseoftamizhi',
+      url: 'https://www.instagram.com/houseoftamizhi?stkn=MXg0cGljNXZ6YmduZQ==',
+      videoUrl: '/videos/tamizhi-reel1.mp4',
+      posterUrl: '/assets/tamizhi-brand-reel.jpg',
+      title: 'Handwoven Heritage • Tamizhi Couture',
+      desc: 'Brand storytelling reel showcasing signature handwoven weaves, bespoke ethnic styling, and artisanal craftsmanship.',
+      categoryTag: 'BRAND STORY • ETHNIC WEAVES',
+    },
+    {
       id: 'reel-tamizhi-1',
       brand: 'House of Tamizhi',
       handle: 'houseoftamizhi',
@@ -165,7 +166,7 @@ export const siteData = {
       posterUrl: '/assets/tamizhi-reel1-poster.jpg',
       title: 'The Festive Edit • Magenta & Gold Heritage',
       desc: 'High-fashion editorial reel, handcrafted silk saree styling, and festive collection storytelling.',
-      categoryTag: 'ETHNIC COUTURE • SAREES',
+      categoryTag: 'FESTIVE LAUNCH • SILKS',
     },
     {
       id: 'reel-tamizhi-2',
@@ -179,6 +180,17 @@ export const siteData = {
       categoryTag: 'FASHION REELS • CONTEMPORARY',
     },
     {
+      id: 'reel-2',
+      brand: 'JP Thangamaligai',
+      handle: 'jpthangamaligai.tirupur',
+      url: 'https://www.instagram.com/jpthangamaligai.tirupur/',
+      videoUrl: '/videos/reel2.mp4',
+      posterUrl: '/assets/reel2-poster.jpg',
+      title: 'Antiques by Nakshi • Royal Bridal Gold',
+      desc: 'South Indian handcrafted antique nakshi craftsmanship and high-engagement bridal jewelry showcase.',
+      categoryTag: 'BRIDAL GOLD • NAKSHI',
+    },
+    {
       id: 'reel-1',
       brand: 'JP Gold & Silver',
       handle: 'jp.vellimaaligai',
@@ -190,21 +202,10 @@ export const siteData = {
       categoryTag: 'REEL PRODUCTION • SILVER',
     },
     {
-      id: 'reel-2',
-      brand: 'JP Gold & Silver',
-      handle: 'jpthangamaligai.tirupur',
-      url: 'https://www.instagram.com/jpthangamaligai.tirupur/?hl=en',
-      videoUrl: '/videos/reel2.mp4',
-      posterUrl: '/assets/reel2-poster.jpg',
-      title: 'High-Engagement Bridal & Gold Showcase',
-      desc: 'Bridal jewelry showcase reels, gold collection highlights, and high-engagement social video.',
-      categoryTag: 'BRAND REELS • GOLD',
-    },
-    {
       id: 'reel-3',
-      brand: 'JP Gold & Silver',
+      brand: 'JP Thangamaligai',
       handle: 'jpthangamaligai.tirupur',
-      url: 'https://www.instagram.com/jpthangamaligai.tirupur/?hl=en',
+      url: 'https://www.instagram.com/jpthangamaligai.tirupur/',
       videoUrl: '/videos/reel3.mp4',
       posterUrl: '/assets/reel3-poster.jpg',
       title: 'Heritage Craftsmanship & Festival Reels',

@@ -16,6 +16,15 @@ export default function VideoShowcase() {
     return siteData.reels;
   }, [selectedBrand]);
 
+  const tamizhiCount = useMemo(
+    () => siteData.reels.filter((r) => r.handle === 'houseoftamizhi').length,
+    []
+  );
+  const jpCount = useMemo(
+    () => siteData.reels.filter((r) => r.handle.startsWith('jp')).length,
+    []
+  );
+
   return (
     <section
       className="vvt-container section-spacing"
@@ -28,7 +37,7 @@ export default function VideoShowcase() {
           <h2>Video Work &amp; Content Strategy</h2>
           <p style={{ maxWidth: 620, marginTop: '0.5rem' }}>
             Watch short-form video productions created for partner brands.
-            Featuring viral fashion campaigns for <strong>House of Tamizhi</strong> and jewelry storytelling for <strong>JP Gold &amp; Silver</strong>.
+            Featuring viral fashion campaigns for <strong>House of Tamizhi</strong> and jewelry storytelling for <strong>JP Thangamaligai</strong>.
           </p>
         </div>
 
@@ -42,7 +51,7 @@ export default function VideoShowcase() {
             <span className="ig-dot" /> @houseoftamizhi ↗
           </a>
           <a
-            href="https://www.instagram.com/jpthangamaligai.tirupur/?hl=en"
+            href="https://www.instagram.com/jpthangamaligai.tirupur/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline brand-ig-badge"
@@ -66,14 +75,14 @@ export default function VideoShowcase() {
           className={`video-filter-btn ${selectedBrand === 'tamizhi' ? 'active' : ''}`}
           onClick={() => setSelectedBrand('tamizhi')}
         >
-          ✨ House of Tamizhi (2)
+          ✨ House of Tamizhi ({tamizhiCount})
         </button>
         <button
           type="button"
           className={`video-filter-btn ${selectedBrand === 'jp' ? 'active' : ''}`}
           onClick={() => setSelectedBrand('jp')}
         >
-          💎 JP Gold &amp; Silver (3)
+          💎 JP Thangamaligai ({jpCount})
         </button>
       </div>
 
