@@ -33,6 +33,11 @@ export function useVideoSlider(totalSlides, mobileBreakpoint = 820) {
     setCurrentIndex((prev) => clampIndex(prev - 1));
   }, [clampIndex]);
 
+  // Reset when slide list changes
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [totalSlides]);
+
   // Recalculate on resize
   useEffect(() => {
     const handleResize = () => {
